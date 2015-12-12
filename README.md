@@ -8,15 +8,15 @@ To build the programs:
 Make
 </code>
 
+Two binaries will be produced: **ncP** & **ncTh**
 
-Two binaries will be produced: ncP & ncTh
+**ncP** is the implementation using the Unix poll() method for file descriptor multiplexing.
 
-ncP is the implementation using the Unix poll() method for file descriptor multiplexing.
-ncTh uses pthreads for multiplexing.
-
+**ncTh** uses pthreads for multiplexing.
 
 My version of Netcat has the following usage:
 <code>
+
 Usage: ./ncP (or ./ncTh) [-k] [-l] [-v] [-r]  [-p source_port] [-w timeout] [hostname] [port[s]]
      -k Forces nc to stay listening for another connection after its
         current connection is completed.
@@ -33,6 +33,7 @@ Usage: ./ncP (or ./ncTh) [-k] [-l] [-v] [-r]  [-p source_port] [-w timeout] [hos
 
 Normal Netcat (from the netcat-openbsd package) has the following usage:
 <code>
+
 usage: nc [-46DdhklnrStUuvzC] [-i interval] [-P proxy_username] [-p source_port]
           [-s source_ip_address] [-T ToS] [-w timeout] [-X proxy_protocol]
           [-x proxy_address[:port]] [hostname] [port[s]]
