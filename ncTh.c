@@ -31,9 +31,10 @@ int made_a_connection = 0;
 pthread_t server_listen_thread;
 pthread_t client_recv_thread;
 
-// BOTH
+/* SERVER + CLIENT
 
-// sends the data over the socket
+   sends the data over the socket
+*/ 
 void send_over_socket(int sockfd, char user_input[1024], int size) 
 {
 	int numbytes;
